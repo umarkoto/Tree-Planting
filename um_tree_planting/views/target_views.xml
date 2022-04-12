@@ -1,0 +1,41 @@
+<odoo>
+    <record id="target_pohon_view_tree" model="ir.ui.view">
+        <field name="name">target.pohon.tree</field>
+        <field name="model">target.pohon</field>
+        <field name="arch" type="xml">
+            <tree string="Target List">
+                <field name="name"/>
+                <field name="target" sum="total"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="target_pohon_view_form" model="ir.ui.view">
+        <field name="name">target.pohon.form</field>
+        <field name="model">target.pohon</field>
+        <field name="arch" type="xml">
+            <form string="Target Form">
+                <sheet>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="target"/>
+                        <field name="active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="target_pohon_action" model="ir.actions.act_window">
+        <field name="name">Target Pohon</field>
+        <field name="res_model">target.pohon</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p name="o_view_nocontent_smiling_face">
+                Input Data Pertama Anda ...
+            </p>
+        </field>
+    </record>
+</odoo>

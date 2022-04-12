@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record id="seq_sale_order" model="ir.sequence">
+            <field name="name">Tanam Pohon</field>
+            <field name="code">um.treeplanting</field>
+            <field name="prefix">TP/</field>
+            <field name="padding">6</field>
+        </record>
+    </data>
+</odoo>

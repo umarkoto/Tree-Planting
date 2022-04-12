@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+tree_planting_user,planting.user,model_um_treeplanting,group_training_user,1,1,1,1
+tanam_pohon_user,tanampohon.user,model_tanam_pohon,group_training_user,1,1,1,1
+update_pohon_user,updatepohon.user,model_update_pohon,group_training_user,1,1,1,1
+target_pohon_user,targetpohon.user,model_target_pohon,group_training_user,1,0,0,0

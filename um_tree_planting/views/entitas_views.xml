@@ -1,0 +1,85 @@
+<odoo>
+
+    <record id="tree_entitas_view_tree" model="ir.ui.view">
+        <field name="name">tree.entitas.tree</field>
+        <field name="model">tree.entitas</field>
+        <field name="arch" type="xml">
+            <tree string="Tree Planting List">
+                <field name="ref"/>
+                <field name="name"/>
+                <field name="tree_line"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Membuat View Search Tree Planting-->
+    <record id="tree_entitas_view_search" model="ir.ui.view">
+        <field name="name">tree.entitas.search</field>
+        <field name="model">tree.entitas</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <searchpanel>
+                    <field name="name" icon="fa-signal" enable_counters="1"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="tree_entitas_view_form" model="ir.ui.view">
+        <field name="name">tree.entitas.form</field>
+        <field name="model">tree.entitas</field>
+        <field name="arch" type="xml">
+            <form string="Tree Planting Form">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="ref"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <notebook>
+                        <page string="Penanam">
+                            <group>
+                                <field name="tree_line" mode="tree,kanban" nolabel="1">
+                                    <tree string="Sesi">
+                                        <field name="name"/>
+<!--                                        <field name="nrp"/>-->
+                                        <field name="jenis_pohon"/>
+                                        <field name="start_date"/>
+                                        <field name="jumlah" sum="Jumlah"/>
+                                        <!--                                            <field name="foto" widget="image" options="{'size': [50, 50]}"/>-->
+                                    </tree>
+                                    <form string='Sesi'>
+                                        <group>
+                                            <field name="name"/>
+<!--                                            <field name="nrp"/>-->
+                                            <field name="jenis_pohon"/>
+                                            <field name="start_date"/>
+                                            <field name="jumlah" sum="Jumlah"/>
+<!--                                            <field name="foto" widget="image" options="{'size': [90, 90]}"/>-->
+                                            <!--                                            <field name="noted"/>-->
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="tree_entitas_action" model="ir.actions.act_window">
+        <field name="name">Tree Planting</field>
+        <field name="res_model">tree.entitas</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p name="o_view_nocontent_smiling_face">
+                Input Data Pertama Anda ...
+            </p>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="request_form">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <form action="/customer/form/submit">
+                        <section class="s_picture bg-200 pt48 pb24">
+                            <div class="container">
+                                <div class="row s_nb_column_fixed">
+                                    <div class="col-lg-12 s_title pt16 pb16">
+                                        <h2 class="s_title_thin" style="text-align: center;">
+                                            <font style="font-size: 62px;">
+                                                <strong>Form</strong>
+                                                Tree Planting
+                                            </font>
+                                        </h2>
+                                    </div>
+                                    <div class="col-lg-12 pt16 pb16">
+                                        <p style="text-align: center;">Please fill the required form</p>
+                                        <p style="text-align: center;">to search your required freight shipment
+                                            and get your offer
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="pt32 pb32 bg-100">
+                            <div class="container">
+                                <div class="main-body">
+                                    <div class="row gutters-sm">
+                                        <div class="col-md-12 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex flex-column">
+                                                        <h3><i class="fa fa-store"/>Data Karyawan
+                                                        </h3>
+                                                        <hr/>
+                                                        <div class="form-row" id="container_row">
+                                                            <div class="form-group col-md-4">
+                                                                <label for="name">Nama</label>
+                                                                <input type="text" class="form-control"
+                                                                       name="name" placeholder="ex. Umar" required="1"/>
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <label for="name">NRP</label>
+                                                                <input type="text" class="form-control"
+                                                                       name="nrp" placeholder="ex. 60122001"
+                                                                       required="1"/>
+                                                            </div>
+                                                            <div class="form-group col-md-4">
+                                                                <label for="name">Entitas</label>
+                                                                <select class="form-control" name="entitas_id"
+                                                                        required="1">
+                                                                    <option value="1">MBUT</option>
+                                                                    <option value="2">YKBUT</option>
+                                                                    <option value="port">GSI</option>
+                                                                    <option value="warehouse">KAMAJU</option>
+                                                                    <option value="port">DPP</option>
+                                                                    <option value="warehouse">KANITRA</option>
+                                                                    <option value="port">LSP ABI</option>
+                                                                    <option value="warehouse">UTS</option>
+                                                                    <option value="port">POLI</option>
+                                                                    <option value="warehouse">D'CARE</option>
+                                                                    <option value="port">KOPKAR YKBUT</option>
+
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex flex-column">
+                                                        <h3><i class="fa fa-store"/>Informasi Pohon
+                                                        </h3>
+                                                        <hr/>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-2">
+                                                                <label for="name">Jml</label>
+                                                                <input type="number" min="1" class="form-control"
+                                                                       name="jumlah" placeholder="ex. 1-5"
+                                                                       required="1"/>
+                                                            </div>
+                                                            <div class="form-group col-md-5">
+                                                                <label for="name">Jenis Pohon</label>
+                                                                <input type="text" class="form-control"
+                                                                       name="jenis_pohon" placeholder="ex. Mangrove"
+                                                                       required="1"/>
+                                                            </div>
+                                                            <div class="form-group col-md-5">
+                                                                <label for="name">Tanggan Penanaman</label>
+                                                                <input type="date" class="form-control"
+                                                                       name="start_date" required="1"/>
+                                                            </div>
+                                                            <div class="form-group col-md-12">
+                                                                <label for="name">Lokasi Penanaman</label>
+                                                                <input type="text" class="form-control"
+                                                                       name="lokasi" placeholder="ex. Muara Tawar"
+                                                                       required="1"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex flex-column">
+                                                        <h3><i class="fa fa-store"/>Dokumentasi
+                                                        </h3>
+                                                        <hr/>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-4">
+                                                                <label for="name">Foto</label>
+                                                                <input name="foto" type="file" required="1"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 mb-3">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="d-flex flex-column">
+                                                        <h3><i class="fa fa-store"/>Keterangan
+                                                        </h3>
+                                                        <hr/>
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-12">
+                                                                <!--                                                                <label for="name">Keterangan</label>-->
+                                                                <textarea type="textarea" class="form-control"
+                                                                          name="noted" placeholder="ex. Mangrove"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="s_call_to_action bg-200 pt48 pb24">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-9 pb24">
+                                        <h3>
+                                            <b>Please Check</b>
+                                            Your Form
+                                        </h3>
+                                        <p class="lead">Continue to confirm your submit by press button <strong>Submit</strong>.
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-3 s_btn text-right pb24 pt24">
+                                        <button type="submit" class="btn btn-lg btn-info" data-original-title=""
+                                                title="" aria-describedby="tooltip100058">Submit&amp;nbsp;
+                                            <i class="fa fa-1x fa-arrow-circle-right fa-fw ml-1"/>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!--                        <button type="submit" class="btn btn-primary">Create</button>-->
+                    </form>
+                </div>
+            </t>
+
+        </template>
+        <template id="tmp_customer_form_success" name="Customer Form Successfully Submitted">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <div class="col-md-12">
+                            <div class="alert alert-success">
+                                Customer created successfully.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

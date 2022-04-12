@@ -1,0 +1,31 @@
+<odoo>
+    <record id="menu_ssshop" model="website.menu">
+        <field name="name">Form Tanam Pohon</field>
+        <field name="url">/tree</field>
+        <field name="parent_id" ref="website.main_menu"/>
+        <field name="sequence" type="int">20</field>
+    </record>
+    <!-- Membuat Menu Dashboard -->
+    <menuitem id="menu_dashboard_tree_planting" name="Tree Planting"
+              web_icon="um_tree_planting,static/description/icon.png"/>
+
+    <!-- Membuat Menu Bar Training -->
+
+    <!--    <menuitem id="menu_bar_tree_planting" name="Dashboard" parent="menu_dashboard_tree_planting"-->
+    <!--              action="tree_entitas_action"/>-->
+<!--    <menuitem id="menu_bar_tanam_pohon" name="Tree Planting" parent="menu_dashboard_tree_planting"-->
+<!--              action="tree_planting_action"/>-->
+    <menuitem id="menu_bar_tanam_pohonn" name="Dashboard" parent="menu_dashboard_tree_planting"
+              action="tanam_pohon_action" sequence="1"/>
+    <menuitem id="menu_bar_tanam_pohonnn" name="Tanam Pohon" parent="menu_dashboard_tree_planting"
+              action="tanam_pohon_list_action" sequence="2"/>
+
+    <!-- Menu Bar Konfigurasi -->
+    <menuitem id="menu_bar_configuration" name="Konfigurasi" parent="menu_dashboard_tree_planting"/>
+    <!-- Menu Item -->
+    <menuitem id="menu_bar_target_pohon" name="Target Pohon" parent="menu_bar_configuration"
+              action="target_pohon_action"/>
+
+
+
+</odoo>
