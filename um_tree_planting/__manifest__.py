@@ -41,6 +41,7 @@
     'demo': [
         'demo/demo.xml',
     ],
+    'image': ['static/description/banner.gif'],
     'installable': True,
     'application': True,
 }
