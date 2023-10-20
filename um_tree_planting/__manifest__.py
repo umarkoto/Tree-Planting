@@ -9,8 +9,8 @@
         Tree Planting
     """,
 
-    'author': "Digisool",
-    'website': "https://digisool.com",
+    'author': "Umar",
+    'website': "https://idkotoo.com",
     'license': "AGPL-3",
 
     # Categories can be used to filter modules in modules listing
